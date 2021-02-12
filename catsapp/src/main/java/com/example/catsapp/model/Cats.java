@@ -1,11 +1,26 @@
 package com.example.catsapp.model;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "cats_table")
+
 public class Cats {
+
+    @Id
+    @Column
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String name;
+    @Column
     private String breed;
+    @Column
     private String color;
+    @Column
     private int age;
+    @Column
     private String ownersName;
 
     public Cats() {
